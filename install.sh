@@ -1,14 +1,3 @@
-#echo "NAME=$PROC" > ~/.username
-TNAME="$PROC";
-col=$(tput cols)
-echo ;
-#figlet -f ASCII-Shadow "$PROC" | lolcat;
-bash ~/T-Header/.banner.sh ${col} ${TNAME}
-echo "";
-#echo -e '\e[0;35m+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[00m';
-#echo -e '\033[1;43;30m### SUBSCRIBE MY RUBIKA PAGE  ### \033[0m';
-#echo -e '\e[0;35m+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[00m';
-echo "";
 #This Script id created by TERMUX20210
 #Don't copy or modify code Read License First
 #Subscribe me on APARAT=> aparat.com/AMIR13870631
