@@ -113,6 +113,43 @@ Remo773 : (\e[33m14.4.2021\e[32m)
 +----------------------------------*/
 \033[0m";
 tput setaf 3;
+echo ""
+echo -e "         \e[1;91m__\e[1;92m,-\e[1;93m////\e[1;92m, "
+echo -e "        \e[1;91m/__\e[1;92m) (\e[1;93mo\e[1;92m) ) "
+echo -e "          /.,--. \       "
+echo -e "         /,-'/.\. \      "
+echo -e "         \.  \.\ \ \     "
+echo -e "          \.  \\\ \  /   "
+echo -e "      \e[1;93m=====\e[1;91m((\e[1;93m=\e[1;91m((\e[1;92m\\e[1;93m=====.=== "
+echo -e "           \e[1;92m    \ \ \.\   "
+echo -e "                \ \ \'     "
+echo -e "                 \ \'      "
+echo -e "                  \ \     "
+echo -e "                   '-'    \e[1;97m "
+echo ""
+echo -e "\e[1;91m [+] created by: \e[1;92mAMIR"
+echo -e "\e[1;91m [+] Github: \e[1;92mTERMUX20210\e[1;97m"
+echo ""
+read -p " Does you want to install Parrot Shell in Termux?(Yes/No) : " input
+
+if [[ $input == Yes || $input == yes || $input == y || $input == Y ]]; then
+    clear
+    cp bash.bashrc $HOME
+    cd /data/data/com.termux/files/usr/etc
+    rm -rf motd
+    rm -rf bash.bashrc
+    cd $HOME
+    mv bash.bashrc /data/data/com.termux/files/usr/etc
+    echo -e "\e[1;91mSuccessfully Installed"
+    echo -e "Restart Termux"
+    exit  3
+elif [[ $input == No || $input == no || $input == n || $input == N ]]; then
+exit 2
+else
+echo -e "\e[1;91mInvalid Option"
+exit 1
+fi
+
 read -p  "Do you want to setup this ? (y/n) " PROC33
 
 tput sgr 0
@@ -195,39 +232,3 @@ else
 fi
 exit 0
 clear
-echo ""
-echo -e "         \e[1;91m__\e[1;92m,-\e[1;93m////\e[1;92m, "
-echo -e "        \e[1;91m/__\e[1;92m) (\e[1;93mo\e[1;92m) ) "
-echo -e "          /.,--. \       "
-echo -e "         /,-'/.\. \      "
-echo -e "         \.  \.\ \ \     "
-echo -e "          \.  \\\ \  /   "
-echo -e "      \e[1;93m=====\e[1;91m((\e[1;93m=\e[1;91m((\e[1;92m\\e[1;93m=====.=== "
-echo -e "           \e[1;92m    \ \ \.\   "
-echo -e "                \ \ \'     "
-echo -e "                 \ \'      "
-echo -e "                  \ \     "
-echo -e "                   '-'    \e[1;97m "
-echo ""
-echo -e "\e[1;91m [+] created by: \e[1;92mAMIR"
-echo -e "\e[1;91m [+] Github: \e[1;92mTERMUX20210\e[1;97m"
-echo ""
-read -p " Does you want to install Parrot Shell in Termux?(Yes/No) : " input
-
-if [[ $input == Yes || $input == yes || $input == y || $input == Y ]]; then
-    clear
-    cp bash.bashrc $HOME
-    cd /data/data/com.termux/files/usr/etc
-    rm -rf motd
-    rm -rf bash.bashrc
-    cd $HOME
-    mv bash.bashrc /data/data/com.termux/files/usr/etc
-    echo -e "\e[1;91mSuccessfully Installed"
-    echo -e "Restart Termux"
-    exit  3
-elif [[ $input == No || $input == no || $input == n || $input == N ]]; then
-exit 2
-else
-echo -e "\e[1;91mInvalid Option"
-exit 1
-fi
