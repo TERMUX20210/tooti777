@@ -21,7 +21,6 @@ oh-my-zsh users only....
 else
 	ok=1
 fi
-done
 clear
 #echo "NAME=$PROC" > ~/.username
 TNAME="$PROC";
